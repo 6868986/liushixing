@@ -88,8 +88,10 @@ zookeeper集群是一个基于主从复制的节点集群，节点分为三种�
 #### zookeeper会话
 
 1. client与zk之间的连接本质上是一个***TCP长连接***；会话的生命周期随着连接的建立而开始，之后的request、response以及心跳机制都是通过会话实现的
+
+   TCP连接：网络中的节点通过TCP连接，使用socket进行通信
+
 2. zk默认端口：2181
-3. 
 
 #### zookeeper事务
 
