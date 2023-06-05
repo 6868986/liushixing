@@ -46,22 +46,17 @@
 
 #### ZAB算法
 
-1. zookeeper
+1. zookeeper介绍
 
-   
+   https://github.com/6868986/liushixing/blob/main/knowledge/%E5%88%86%E5%B8%83%E5%BC%8F/zookeeper.md
 
 2. ZAB协议介绍
-
 
    Zookeeper Automic Broadcast（zookeeper原子广播协议）
 
 3. 消息广播
 
 4. 崩溃恢复
-
-   zookeeper
-
-5. 
 
 
 
