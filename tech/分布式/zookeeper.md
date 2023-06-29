@@ -58,8 +58,8 @@ zookeeper集群是一个基于主从复制的节点集群，节点分为三种�
 
 1. 客户端与服务端保持连接
 
-   - 轮询/pull模型
-   - push模型
+   - 轮询/pull模型（client向server）
+   - push模型（server向client）
 
 2. zookeeper推送通知过程
 
@@ -81,17 +81,55 @@ zookeeper集群是一个基于主从复制的节点集群，节点分为三种�
 
 3. zookeeper的watch是一个***一次性触发器***，client收到一次通知后必须再次设置另一个watch，这样才能知道未来的变化
 
-   这样带来一个***问题***：client珊珊本来watch了一个znode星星，然后znode星星的数据被修改，然后zookeeper服务端发给client珊珊一个通知，然后珊珊还想watch星星，于是就需要对znode星星重新设置一个watch，那如果在收到通知之后&&设置新watch之前，其他client对znode星星进行了更改，那珊珊就感知不到了，从而丢失这次znode的变化
+   ​		这样带来一个***问题***：client珊珊本来watch了一个znode星星，然后znode星星的数据被修改，然后zookeeper服务端发给client珊珊一个通知，然后珊珊还想watch星星，于是就需要对znode星星重新设置一个watch，那如果在收到通知之后&&设置新watch之前，其他client对znode星星进行了更改，那珊珊就感知不到了，从而丢失这次znode的变化
 
 4. 
 
 #### zookeeper会话
 
-1. client与zk之间的连接本质上是一个***TCP长连接***；会话的生命周期随着连接的建立而开始，之后的request、response以及心跳机制都是通过会话实现的
+1. 会话简介
+
+   ​		client与zk之间的连接本质上是一个***TCP长连接***；会话的生命周期随着连接的建立而开始，之后的request、response以及心跳机制（ping）、watch通知都是通过会话实现的
 
    TCP连接：网络中的节点通过TCP连接，使用socket进行通信
 
+   长连接：建立TCP连接 => socket收发完数据 => 保持TCP连接
+
+   ​				 => socket开始新一轮的收发数据 => 保持TCP连接 => ...... => 关闭TCP连接
+
+   短连接：建立TCP连接 => socket收发完数据 => 关闭TCP连接
+
+   长短连接的选取：短连接需要频繁的“三握四挥”，耗费资源；长连接在高并发的场景下，存在很多未被有效使用的TCP连接，同样也会耗费资源；因此长短连接要灵活选取，没有绝对的优势
+
+   eg：使用JDBC进行数据库连接的时候建立的数据库连接池（类似ThreadPool）
+
+   参数1:minPoolSize    最小连接数
+
+   参数2:maxPoolSize    最大连接数
+
+   参数3:maxIdleTime    最大空闲时间
+
+   其中最小连接数中的连接，即使未被使用也会一直存在 => 长连接
+
+   非最小连接数中的连接，如果一直未被使用以至于超过了最大空闲时间，则连接会被回收 => 短连接
+
 2. zk默认端口：2181
+
+3. Session的建立
+
+   ​		client维护一个zk的server集群列表，启动时，client遍历这个列表并尝试连接server，失败后就尝试连接下一个server，直至连接成功。一旦连接成功，相当于在client和server之间存在了一个TCP长连接，同时server也会开始为这个client维护一个Session
+
+4. Session的属性参数
+
+   - sessionID：会话的唯一标识 = 时间戳 + 机器ID
+
+   - timeout：会话的超时时间；client配置好超时时间并发送给server，然后server根据自己的超时时间的限制来确定最终的timeout
+
+     ​		当由于网络中断、server负载过大等原因导致client与server断开连接时，这次会话以及其相关的ephemeral znode并不会立即被删除，只要在timeout时间内，client重新连接上了任何一个server，则之前的会话依旧有效。
+
+   - expiration time：绝对过期时间（时间轴上的某个时间点）
+
+5. 
 
 #### zookeeper事务
 
