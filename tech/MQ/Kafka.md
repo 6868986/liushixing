@@ -180,11 +180,47 @@ kafka是最初由Linkedin公司开发，由Scala和Java编写，Kafka是一个�
 
 #### Kafka Broker
 
+###### ***leader broker***
+
+创建、删除主题、增加分区并分配leader分区；集群broker管理，包括新增、关闭和故障处理；
+
+分区重分配（auto.leader.rebalance.enable=true），分区leader选举
+
+每个broker都有自己的broker id，启动后去zookeeper上竞争controller节点，抢到的即为broker leader，
+
+###### ***Replica***
+
+1. follower故障
+
+   体现在参数落后时间，LEO同HW差太多，直接将其从ISR移除，直至LEO追上HW
+
+2. leader故障
+
+   将leader replica从ISR移除，然后从ISR中选举新的leader，然后将所有replica高于HW的消息删除，之后继续从新的leader同步消息
+
+##### 分区平衡
+
+时间戳索引文件：时间戳 + 相对offest，查询某时间范围内的消息
+
+根据时间戳查出offset，然后根据offest去index文件找偏移量索引，然后去log文件找数据
+
+###### 消费者组初始化流程
+
+1. consumer发送joinGroup请求，groupid一致
+2. 选出leader consumer
+3. 
+
+##### Coordinator
+
+主要用于offset管理和消费者的Rebalance
+
+- 对于一个consumer group，求_consumer_offset这个topic上的分区号，求法：groupid.hashcode() % 50,求出来的partition所在的那个broker即为coordinator
+
+
+
 #### Kafka存储层 ---持久化
 
-
-
-
+###### 
 
 
 

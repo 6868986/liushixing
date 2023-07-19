@@ -1,254 +1,4 @@
-Java基础知识面试题
 
-目录
-
-[Java概述](https://km.sankuai.com/page/543872372#id-Java概述)
-
-[何为编程](https://km.sankuai.com/page/543872372#id-何为编程)
-
-[什么是Java](https://km.sankuai.com/page/543872372#id-什么是Java)
-
-[jdk1.5之后的三大版本](https://km.sankuai.com/page/543872372#id-jdk1.5之后的三大版本)
-
-[JVM、JRE和JDK的关系](https://km.sankuai.com/page/543872372#id-JVM、JRE和JDK的关系)
-
-[什么是跨平台性？原理是什么](https://km.sankuai.com/page/543872372#id-什么是跨平台性？原理是什么)
-
-[Java语言有哪些特点](https://km.sankuai.com/page/543872372#id-Java语言有哪些特点)
-
-[什么是字节码？采用字节码的最大好处是什么](https://km.sankuai.com/page/543872372#id-什么是字节码？采用字节码的最大好处是什么)
-
-[什么是Java程序的主类？应用程序和小程序的主类有何不同？](https://km.sankuai.com/page/543872372#id-什么是Java程序的主类？应用程序和小程序的主类有何不同？)
-
-[Java应用程序与小程序之间有那些差别？](https://km.sankuai.com/page/543872372#id-Java应用程序与小程序之间有那些差别？)
-
-[Java和C++的区别](https://km.sankuai.com/page/543872372#id-Java和C++的区别)
-
-[Oracle JDK 和 OpenJDK 的对比](https://km.sankuai.com/page/543872372#id-OracleJDK和OpenJDK的对比)
-
-[基础语法](https://km.sankuai.com/page/543872372#id-基础语法)
-
-[数据类型](https://km.sankuai.com/page/543872372#id-数据类型)
-
-[Java有哪些数据类型](https://km.sankuai.com/page/543872372#id-Java有哪些数据类型)
-
-[switch 是否能作用在 byte 上，是否能作用在 long 上，是否能作用在 String 上](https://km.sankuai.com/page/543872372#id-switch是否能作用在byte上，是否能作用在long上，是否能作用在String上)
-
-[用最有效率的方法计算 2 乘以 8](https://km.sankuai.com/page/543872372#id-用最有效率的方法计算2乘以8)
-
-[Math.round(11.5) 等于多少？Math.round(-11.5)等于多少](https://km.sankuai.com/page/543872372#id-Math.round(11.5)等于多少？Math.round(-11.5)等于多少)
-
-[float f=3.4;是否正确](https://km.sankuai.com/page/543872372#id-floatf=3.4;是否正确)
-
-[short s1 = 1; s1 = s1 + 1;有错吗?short s1 = 1; s1 += 1;有错吗](https://km.sankuai.com/page/543872372#id-shorts1=1;s1=s1+1;有错吗?shorts1=1;s1+=1;有错吗)
-
-[编码](https://km.sankuai.com/page/543872372#id-编码)
-
-[Java语言采用何种编码方案？有何特点？](https://km.sankuai.com/page/543872372#id-Java语言采用何种编码方案？有何特点？)
-
-[注释](https://km.sankuai.com/page/543872372#id-注释)
-
-[什么Java注释](https://km.sankuai.com/page/543872372#id-什么Java注释)
-
-[访问修饰符](https://km.sankuai.com/page/543872372#id-访问修饰符)
-
-[访问修饰符 public,private,protected,以及不写（默认）时的区别](https://km.sankuai.com/page/543872372#id-访问修饰符public,private,protected,以及不写（默认）时的区别)
-
-[运算符](https://km.sankuai.com/page/543872372#id-运算符)
-
-[&和&&的区别](https://km.sankuai.com/page/543872372#id-&和&&的区别)
-
-[关键字](https://km.sankuai.com/page/543872372#id-关键字)
-
-[Java 有没有 goto](https://km.sankuai.com/page/543872372#id-Java有没有goto)
-
-[final 有什么用？](https://km.sankuai.com/page/543872372#id-final有什么用？)
-
-[final finally finalize区别](https://km.sankuai.com/page/543872372#id-finalfinallyfinalize区别)
-
-[this关键字的用法](https://km.sankuai.com/page/543872372#id-this关键字的用法)
-
-[super关键字的用法](https://km.sankuai.com/page/543872372#id-super关键字的用法)
-
-[this与super的区别](https://km.sankuai.com/page/543872372#id-this与super的区别)
-
-[static存在的主要意义](https://km.sankuai.com/page/543872372#id-static存在的主要意义)
-
-[static的独特之处](https://km.sankuai.com/page/543872372#id-static的独特之处)
-
-[static应用场景](https://km.sankuai.com/page/543872372#id-static应用场景)
-
-[static注意事项](https://km.sankuai.com/page/543872372#id-static注意事项)
-
-[流程控制语句](https://km.sankuai.com/page/543872372#id-流程控制语句)
-
-[break ,continue ,return 的区别及作用](https://km.sankuai.com/page/543872372#id-break,continue,return的区别及作用)
-
-[在 Java 中，如何跳出当前的多重嵌套循环](https://km.sankuai.com/page/543872372#id-在Java中，如何跳出当前的多重嵌套循环)
-
-[面向对象](https://km.sankuai.com/page/543872372#id-面向对象)
-
-[面向对象概述](https://km.sankuai.com/page/543872372#id-面向对象概述)
-
-[面向对象和面向过程的区别](https://km.sankuai.com/page/543872372#id-面向对象和面向过程的区别)
-
-[面向对象三大特性](https://km.sankuai.com/page/543872372#id-面向对象三大特性)
-
-[面向对象的特征有哪些方面](https://km.sankuai.com/page/543872372#id-面向对象的特征有哪些方面)
-
-[什么是多态机制？Java语言是如何实现多态的？](https://km.sankuai.com/page/543872372#id-什么是多态机制？Java语言是如何实现多态的？)
-
-[面向对象五大基本原则是什么（可选）](https://km.sankuai.com/page/543872372#id-面向对象五大基本原则是什么（可选）)
-
-[类与接口](https://km.sankuai.com/page/543872372#id-类与接口)
-
-[抽象类和接口的对比](https://km.sankuai.com/page/543872372#id-抽象类和接口的对比)
-
-[普通类和抽象类有哪些区别？](https://km.sankuai.com/page/543872372#id-普通类和抽象类有哪些区别？)
-
-[抽象类能使用 final 修饰吗？](https://km.sankuai.com/page/543872372#id-抽象类能使用final修饰吗？)
-
-[创建一个对象用什么关键字？对象实例与对象引用有何不同？](https://km.sankuai.com/page/543872372#id-创建一个对象用什么关键字？对象实例与对象引用有何不同？)
-
-[变量与方法](https://km.sankuai.com/page/543872372#id-变量与方法)
-
-[成员变量与局部变量的区别有哪些](https://km.sankuai.com/page/543872372#id-成员变量与局部变量的区别有哪些)
-
-[在Java中定义一个不做事且没有参数的构造方法的作用](https://km.sankuai.com/page/543872372#id-在Java中定义一个不做事且没有参数的构造方法的作用)
-
-[在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？](https://km.sankuai.com/page/543872372#id-在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？)
-
-[一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？](https://km.sankuai.com/page/543872372#id-一个类的构造方法的作用是什么？若一个类没有声明构造方法，改程序能正确执行吗？为什么？)
-
-[构造方法有哪些特性？](https://km.sankuai.com/page/543872372#id-构造方法有哪些特性？)
-
-[静态变量和实例变量区别](https://km.sankuai.com/page/543872372#id-静态变量和实例变量区别)
-
-[静态变量与普通变量区别](https://km.sankuai.com/page/543872372#id-静态变量与普通变量区别)
-
-[静态方法和实例方法有何不同？](https://km.sankuai.com/page/543872372#id-静态方法和实例方法有何不同？)
-
-[在一个静态方法内调用一个非静态成员为什么是非法的？](https://km.sankuai.com/page/543872372#id-在一个静态方法内调用一个非静态成员为什么是非法的？)
-
-[什么是方法的返回值？返回值的作用是什么？](https://km.sankuai.com/page/543872372#id-什么是方法的返回值？返回值的作用是什么？)
-
-[内部类](https://km.sankuai.com/page/543872372#id-内部类)
-
-[什么是内部类？](https://km.sankuai.com/page/543872372#id-什么是内部类？)
-
-[内部类的分类有哪些](https://km.sankuai.com/page/543872372#id-内部类的分类有哪些)
-
-[静态内部类](https://km.sankuai.com/page/543872372#id-静态内部类)
-
-[成员内部类](https://km.sankuai.com/page/543872372#id-成员内部类)
-
-[局部内部类](https://km.sankuai.com/page/543872372#id-局部内部类)
-
-[匿名内部类](https://km.sankuai.com/page/543872372#id-匿名内部类)
-
-[内部类的优点](https://km.sankuai.com/page/543872372#id-内部类的优点)
-
-[内部类有哪些应用场景](https://km.sankuai.com/page/543872372#id-内部类有哪些应用场景)
-
-[局部内部类和匿名内部类访问局部变量的时候，为什么变量必须要加上final？](https://km.sankuai.com/page/543872372#id-局部内部类和匿名内部类访问局部变量的时候，为什么变量必须要加上final？)
-
-[内部类相关，看程序说出运行结果](https://km.sankuai.com/page/543872372#id-内部类相关，看程序说出运行结果)
-
-[重写与重载](https://km.sankuai.com/page/543872372#id-重写与重载)
-
-[构造器（constructor）是否可被重写（override）](https://km.sankuai.com/page/543872372#id-构造器（constructor）是否可被重写（override）)
-
-[重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？](https://km.sankuai.com/page/543872372#id-重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？)
-
-[对象相等判断](https://km.sankuai.com/page/543872372#id-对象相等判断)
-
-[== 和 equals 的区别是什么](https://km.sankuai.com/page/543872372#id-==和equals的区别是什么)
-
-[hashCode 与 equals (重要)](https://km.sankuai.com/page/543872372#id-hashCode与equals(重要))
-
-[对象的相等与指向他们的引用相等，两者有什么不同？](https://km.sankuai.com/page/543872372#id-对象的相等与指向他们的引用相等，两者有什么不同？)
-
-[值传递](https://km.sankuai.com/page/543872372#id-值传递)
-
-[当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递](https://km.sankuai.com/page/543872372#id-当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递)
-
-[为什么 Java 中只有值传递](https://km.sankuai.com/page/543872372#id-为什么Java中只有值传递)
-
-[值传递和引用传递有什么区别](https://km.sankuai.com/page/543872372#id-值传递和引用传递有什么区别)
-
-[Java包](https://km.sankuai.com/page/543872372#id-Java包)
-
-[JDK 中常用的包有哪些](https://km.sankuai.com/page/543872372#id-JDK中常用的包有哪些)
-
-[import java和javax有什么区别](https://km.sankuai.com/page/543872372#id-importjava和javax有什么区别)
-
-[IO流](https://km.sankuai.com/page/543872372#id-IO流)
-
-[java 中 IO 流分为几种?](https://km.sankuai.com/page/543872372#id-java中IO流分为几种?)
-
-[BIO,NIO,AIO 有什么区别?](https://km.sankuai.com/page/543872372#id-BIO,NIO,AIO有什么区别?)
-
-[Files的常用方法都有哪些？](https://km.sankuai.com/page/543872372#id-Files的常用方法都有哪些？)
-
-[反射](https://km.sankuai.com/page/543872372#id-反射)
-
-[什么是反射机制？](https://km.sankuai.com/page/543872372#id-什么是反射机制？)
-
-[反射机制优缺点](https://km.sankuai.com/page/543872372#id-反射机制优缺点)
-
-[反射机制的应用场景有哪些？](https://km.sankuai.com/page/543872372#id-反射机制的应用场景有哪些？)
-
-[Java获取反射的三种方法](https://km.sankuai.com/page/543872372#id-Java获取反射的三种方法)
-
-[网络编程](https://km.sankuai.com/page/543872372#id-网络编程)
-
-[常用API](https://km.sankuai.com/page/543872372#id-常用API)
-
-[String相关](https://km.sankuai.com/page/543872372#id-String相关)
-
-[字符型常量和字符串常量的区别](https://km.sankuai.com/page/543872372#id-字符型常量和字符串常量的区别)
-
-[什么是字符串常量池？](https://km.sankuai.com/page/543872372#id-什么是字符串常量池？)
-
-[String 是最基本的数据类型吗](https://km.sankuai.com/page/543872372#id-String是最基本的数据类型吗)
-
-[String有哪些特性](https://km.sankuai.com/page/543872372#id-String有哪些特性)
-
-[String为什么是不可变的吗？](https://km.sankuai.com/page/543872372#id-String为什么是不可变的吗？)
-
-[String真的是不可变的吗？](https://km.sankuai.com/page/543872372#id-String真的是不可变的吗？)
-
-[是否可以继承 String 类](https://km.sankuai.com/page/543872372#id-是否可以继承String类)
-
-[String str="i"与 String str=new String(“i”)一样吗？](https://km.sankuai.com/page/543872372#id-Stringstr="i"与Stringstr=newString(“i”)一样吗？)
-
-[String s = new String(“xyz”);创建了几个字符串对象](https://km.sankuai.com/page/543872372#id-Strings=newString(“xyz”);创建了几个字符串对象)
-
-[如何将字符串反转？](https://km.sankuai.com/page/543872372#id-如何将字符串反转？)
-
-[数组有没有 length()方法？String 有没有 length()方法](https://km.sankuai.com/page/543872372#id-数组有没有length()方法？String有没有length()方法)
-
-[String 类的常用方法都有那些？](https://km.sankuai.com/page/543872372#id-String类的常用方法都有那些？)
-
-[在使用 HashMap 的时候，用 String 做 key 有什么好处？](https://km.sankuai.com/page/543872372#id-在使用HashMap的时候，用String做key有什么好处？)
-
-[String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的](https://km.sankuai.com/page/543872372#id-String和StringBuffer、StringBuilder的区别是什么？String为什么是不可变的)
-
-[Date相关](https://km.sankuai.com/page/543872372#id-Date相关)
-
-[包装类相关](https://km.sankuai.com/page/543872372#id-包装类相关)
-
-[自动装箱与拆箱](https://km.sankuai.com/page/543872372#id-自动装箱与拆箱)
-
-[int 和 Integer 有什么区别](https://km.sankuai.com/page/543872372#id-int和Integer有什么区别)
-
-[Integer a= 127 与 Integer b = 127相等吗](https://km.sankuai.com/page/543872372#id-Integera=127与Integerb=127相等吗)
-
-[常用工具类库](https://km.sankuai.com/page/543872372#id-常用工具类库)
-
-[单元测试](https://km.sankuai.com/page/543872372#id-单元测试)
-
-[日志](https://km.sankuai.com/page/543872372#id-日志)
 
 
 
@@ -895,122 +645,27 @@ static变量也称作静态变量，静态变量和非静态变量的区别是�
 
 定义在类内部的静态类，就是静态内部类。
 
-public class Outer { private static int radius = 1; static class StaticInner { public void visit() { System.out.println("visit outer static variable:" + radius); } } }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-
 静态内部类可以访问外部类所有的静态变量，而不可访问外部类的非静态变量；静态内部类的创建方式，new 外部类.静态内部类()，如下：
 
 Outer.StaticInner inner = new Outer.StaticInner(); inner.visit();
-
-- 1
-- 2
 
 ##### 成员内部类
 
 定义在类内部，成员位置上的非静态类，就是成员内部类。
 
-public class Outer { private static int radius = 1; private int count =2; class Inner { public void visit() { System.out.println("visit outer static variable:" + radius); System.out.println("visit outer variable:" + count); } } }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-
 成员内部类可以访问外部类所有的变量和方法，包括静态和非静态，私有和公有。成员内部类依赖于外部类的实例，它的创建方式外部类实例.new 内部类()，如下：
 
 Outer outer = new Outer(); Outer.Inner inner = outer.new Inner(); inner.visit();
-
-- 1
-- 2
-- 3
 
 ##### 局部内部类
 
 定义在方法中的内部类，就是局部内部类。
 
-public class Outer { private int out_a = 1; private static int STATIC_b = 2; public void testFunctionClass(){ int inner_c =3; class Inner { private void fun(){ System.out.println(out_a); System.out.println(STATIC_b); System.out.println(inner_c); } } Inner inner = new Inner(); inner.fun(); } public static void testStaticFunctionClass(){ int d =3; class Inner { private void fun(){ // System.out.println(out_a); 编译错误，定义在静态方法中的局部类不可以访问外部类的实例变量 System.out.println(STATIC_b); System.out.println(d); } } Inner inner = new Inner(); inner.fun(); } }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
-- 18
-- 19
-- 20
-- 21
-- 22
-- 23
-- 24
-- 25
-- 26
-- 27
-- 28
-- 29
-- 30
-
 定义在实例方法中的局部类可以访问外部类的所有变量和方法，定义在静态方法中的局部类只能访问外部类的静态变量和方法。局部内部类的创建方式，在对应方法内，new 内部类()，如下：
-
-public static void testStaticFunctionClass(){ class Inner { } Inner inner = new Inner(); }
-
-- 1
-- 2
-- 3
-- 4
-- 5
 
 ##### 匿名内部类
 
 匿名内部类就是没有名字的内部类，日常开发中使用的比较多。
-
-public class Outer { private void test(final int i) { new Service() { public void method() { for (int j = 0; j < i; j++) { System.out.println("匿名内部类" ); } } }.method(); } } //匿名内部类必须继承或实现一个已有的接口 interface Service{ void method(); }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
 
 除了没有名字，匿名内部类还有以下特点：
 
@@ -1022,10 +677,6 @@ public class Outer { private void test(final int i) { new Service() { public voi
 匿名内部类创建方式：
 
 new 类/接口{ //匿名内部类实现部分 }
-
-- 1
-- 2
-- 3
 
 #### 内部类的优点
 
@@ -1051,52 +702,15 @@ new 类/接口{ //匿名内部类实现部分 }
 
 public class Outer { void outMethod(){ final int a =10; class Inner { void innerMethod(){ System.out.println(a); } } } }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-
 以上例子，为什么要加final呢？是因为**生命周期不一致**， 局部变量直接存储在栈中，当方法执行结束后，非final的局部变量就被销毁。而局部内部类对局部变量的引用依然存在，如果局部内部类要调用局部变量时，就会出错。加了final，可以确保局部内部类使用的变量与外层的局部变量区分开，解决了这个问题。
 
 #### 内部类相关，看程序说出运行结果
 
 public class Outer { private int age = 12; class Inner { private int age = 13; public void print() { int age = 14; System.out.println("局部变量：" + age); System.out.println("内部类变量：" + this.age); System.out.println("外部类变量：" + Outer.this.age); } } public static void main(String[] args) { Outer.Inner in = new Outer().new Inner(); in.print(); } }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
-- 18
-- 19
-
 运行结果：
 
 局部变量：14 内部类变量：13 外部类变量：12
-
-- 1
-- 2
-- 3
 
 ### 重写与重载
 
@@ -1127,24 +741,6 @@ public class Outer { private int age = 12; class Inner { private int age = 13; p
 **举个例子：**
 
 public class test1 { public static void main(String[] args) { String a = new String("ab"); // a 为一个引用 String b = new String("ab"); // b为另一个引用,对象的内容一样 String aa = "ab"; // 放在常量池中 String bb = "ab"; // 从常量池中查找 if (aa == bb) // true System.out.println("aa==bb"); if (a == b) // false，非同一对象 System.out.println("a==b"); if (a.equals(b)) // true System.out.println("aEQb"); if (42 == 42.0) { // true System.out.println("true"); } } }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
 
 **说明：**
 
@@ -1207,33 +803,9 @@ example 1
 
 public static void main(String[] args) { int num1 = 10; int num2 = 20; swap(num1, num2); System.out.println("num1 = " + num1); System.out.println("num2 = " + num2); } public static void swap(int a, int b) { int temp = a; a = b; b = temp; System.out.println("a = " + a); System.out.println("b = " + b); }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
-- 18
-
 **结果**：
 
 a = 20 b = 10 num1 = 10 num2 = 20
-
-- 1
-- 2
-- 3
-- 4
 
 **解析**：
 
@@ -1247,28 +819,9 @@ example 2
 
 public static void main(String[] args) { int[] arr = { 1, 2, 3, 4, 5 }; System.out.println(arr[0]); change(arr); System.out.println(arr[0]); } public static void change(int[] array) { // 将数组的第一个元素变为0 array[0] = 0; }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-
 **结果**：
 
 1 0
-
-- 1
-- 2
-
-**解析**：
-
-![img]()
 
 array 被初始化 arr 的拷贝也就是一个对象的引用，也就是说 array 和 arr 指向的时同一个数组对象。 因此，外部对引用对象的改变会反映到所对应的对象上。
 
@@ -1280,46 +833,9 @@ example 3
 
 public class Test { public static void main(String[] args) { // TODO Auto-generated method stub Student s1 = new Student("小张"); Student s2 = new Student("小李"); Test.swap(s1, s2); System.out.println("s1:" + s1.getName()); System.out.println("s2:" + s2.getName()); } public static void swap(Student x, Student y) { Student temp = x; x = y; y = temp; System.out.println("x:" + x.getName()); System.out.println("y:" + y.getName()); } }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
-- 18
-- 19
-
 **结果**：
 
 x:小李 y:小张 s1:小张 s2:小李
-
-- 1
-- 2
-- 3
-- 4
-
-**解析**：
-
-交换之前：
-
-![img]()
-
-交换之后：
-
-![img]()
-
-通过上面两张图可以很清晰的看出： **方法并没有改变存储在变量 s1 和 s2 中的对象引用。swap方法的参数x和y被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝**
 
 **总结**
 
@@ -1431,30 +947,7 @@ JAVA反射机制是在运行状态中，对于任意一个类，都能够知道�
 
 public class Student { private int id; String name; protected boolean sex; public float score; }
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-
 public class Get { //获取反射机制三种方式 public static void main(String[] args) throws ClassNotFoundException { //方式一(通过建立对象) Student stu = new Student(); Class classobj1 = stu.getClass(); System.out.println(classobj1.getName()); //方式二（所在通过路径-相对路径） Class classobj2 = Class.forName("fanshe.Student"); System.out.println(classobj2.getName()); //方式三（通过类名） Class classobj3 = Student.class; System.out.println(classobj3.getName()); } }
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
 
 ## 网络编程
 
@@ -1494,8 +987,7 @@ public class Get { //获取反射机制三种方式 public static void main(Stri
 
 /** The value is used for character storage. */ private final char value[];
 
-- 1
-- 2
+
 
 #### String真的是不可变的吗？
 
@@ -1505,15 +997,9 @@ public class Get { //获取反射机制三种方式 public static void main(Stri
 
 String str = "Hello"; str = str + " World"; System.out.println("str=" + str);
 
-- 1
-- 2
-- 3
-
 结果：
 
 str=Hello World
-
-- 1
 
 解析：
 
@@ -1523,31 +1009,9 @@ str=Hello World
 
 // 创建字符串"Hello World"， 并赋给引用s String s = "Hello World"; System.out.println("s = " + s); // Hello World // 获取String类中的value字段 Field valueFieldOfString = String.class.getDeclaredField("value"); // 改变value属性的访问权限 valueFieldOfString.setAccessible(true); // 获取s对象上的value属性的值 char[] value = (char[]) valueFieldOfString.get(s); // 改变value所引用的数组中的第5个字符 value[5] = '_'; System.out.println("s = " + s); // Hello_World
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17
-- 18
-
 结果：
 
 s = Hello World s = Hello_World
-
-- 1
-- 2
 
 解析：
 
@@ -1567,35 +1031,13 @@ String 类是 final 类，不可以被继承。
 
 String str1 = "hello"; //str1指向静态区 String str2 = new String("hello"); //str2指向堆上的对象 String str3 = "hello"; String str4 = new String("hello"); System.out.println(str1.equals(str2)); //true System.out.println(str2.equals(str4)); //true System.out.println(str1 == str3); //true System.out.println(str1 == str2); //false System.out.println(str2 == str4); //false System.out.println(str2 == "hello"); //false str2 = str1; System.out.println(str2 == "hello"); //true
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-
-#### 如何将字符串反转？
+如何将字符串反转？
 
 使用 StringBuilder 或者 stringBuffer 的 reverse() 方法。
 
 示例代码：
 
 // StringBuffer reverse StringBuffer stringBuffer = new StringBuffer(); stringBuffer. append("abcdefg"); System. out. println(stringBuffer. reverse()); // gfedcba // StringBuilder reverse StringBuilder stringBuilder = new StringBuilder(); stringBuilder. append("abcdefg"); System. out. println(stringBuilder. reverse()); // gfedcba
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
 
 #### 数组有没有 length()方法？String 有没有 length()方法
 
@@ -1668,28 +1110,8 @@ Java 为每个原始类型提供了包装类型：
 
 如果整型字面量的值在-128到127之间，那么自动装箱时不会new新的Integer对象，而是直接引用常量池中的Integer对象，超过范围 a1==b1的结果是false
 
+```java
 public static void main(String[] args) { Integer a = new Integer(3); Integer b = 3; // 将3自动装箱成Integer类型 int c = 3; System.out.println(a == b); // false 两个引用没有引用同一对象 System.out.println(a == c); // true a自动拆箱成int类型再和c比较 System.out.println(b == c); // true Integer a1 = 128; Integer b1 = 128; System.out.println(a1 == b1); // false Integer a2 = 127; Integer b2 = 127; System.out.println(a2 == b2); // true }
+```
 
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
-- 16
-
-## 常用工具类库
-
-## 单元测试
-
-## 日志
 
