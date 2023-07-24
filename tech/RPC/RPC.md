@@ -43,7 +43,7 @@ Client端：
 
 #### RPC demo
 
-https://github.com/6868986/Test/tree/dev/src/main/java/org/example/Study/RPC
+https://github.com/6868986/JavaDemo/tree/main/src/main/java/org/example/RPC/RPCdemo
 
 缺点：
 
